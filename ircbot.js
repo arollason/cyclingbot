@@ -127,7 +127,7 @@ cyclingbot.prototype.handleChallengeRequest = function(content, channel, from) {
 
 cyclingbot.prototype.handleChallengeComplete = function(content, channel, from) {
 	
-	request({url: 'https://www.strava.com/api/v3/activities/' + content + '?access_token=ee45ae7664c6048edb32d8fc8e4e9e54b19ae62e'}, function(error, response, body) {
+	request({url: 'https://www.strava.com/api/v3/activities/' + content + '?access_token=' + config.stravaApiToken}, function(error, response, body) {
 		if (!error && response.statusCode == 200) {
 			var info = JSON.parse(body);
 			var distance = precise_round((info.distance / 1000), 2);
