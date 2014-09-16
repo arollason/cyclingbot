@@ -5,4 +5,5 @@ config.server = 'irc.servername.org'; // The server name you want your bot to jo
 config.name = 'Botname'; // The name of your bot.
 config.lastFmApiKey = '1234abcd'; // Last FM API key. This is free with a standard account.
 config.weatherApiKey = '1234abcd'; // World Weather Online free API key.
+config.modules = ['rules']; // List the modules you want to use in here. 
 module.exports = config;
